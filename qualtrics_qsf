@@ -1,11 +1,15 @@
 With the web-based implementation of M2C2kit assessments, it is possible for them to be embedded via Qualtrics, REDCAP, and Metricwire (as well as anything else with a WebView).
 
-This guide contains instructions for using the Qualtrics QSF generator and create embedded M2C2kit assessments in Qualtrics.
+This guide contains instructions for using the Qualtrics QSF generator and creating embedded M2C2kit tasks in Qualtrics.
 https://github.com/m2c2-project/qualtrics-qsf-generator
 
+-----
+About This QSF Qualtrics Generator
+This tool is designed to create a QSF file for our M2C2 cognitive activities, allowing for integration into Qualtrics. Once generated, the QSF file will need to be imported into Qualtrics, after which you can add survey questions as desired. 
+***Please note that JavaScript must be enabled for this tool, which is not available in the free version of Qualtrics.***
+----
 
 Download and launch qualtrics-qsf-generator.html in your browser. https://github.com/m2c2-project/qualtrics-qsf-generator/blob/main/qualtrics-qsf-generator.html
-
 Drag and drop tasks to fit the desired order, input the number of trials for each task and add any additional parameters ('key:value' pairs, comma separated, no spaces). If desired, toggle the checkbox for Qualtrics to auto advance/submit on M2C2 session end, and select your desired language. Finally click the 'Generate Qualtrics QSF File' button, and then click the link to download the QSF file.
 
 To import this .qsf file onto your Qualtrics instance, follow this guide:
@@ -20,3 +24,26 @@ You have a couple of avenues for participant management.
 You can create a List and add the following data columns: M2C2_PARTICIPANT_ID, M2C2_SESSION_ID, M2C2_GROUP_ID, and M2C2_WAVE_ID. Qualtrics will pipe this into your records automatically.
 You can use the anonymous survey distribution link and append key=value data for the following: M2C2_PARTICIPANT_ID, M2C2_SESSION_ID, M2C2_GROUP_ID, and M2C2_WAVE_ID.
 We recommend thoroughly testing your deployment strategy to be sure you have data that is capable of processing.
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+1. Go to https://github.com/m2c2-project/qualtrics-qsf-generator/blob/main/qualtrics-qsf-generator.html and download the raw file
+2. Open the downloaded file
+3. Read the instructions
+    - You can change the order of the cognitive tasks
+    - Specify the number of trials for each task
+    - Enter a study ID
+4. Once you have everything to your liking, click on 'Generate Qualtrics QSF File'
+5. Click on 'Click here to download your Qualtrics QSF File'
+6. You are now ready to upload into Qualtrics!
+
+-------------------------------------------------------------------------------------------------------------------------------
+How to Import the QSF File into Qualtrics:
+
+1. Go to Qualtrics and select Create a new project.
+2. Choose Survey and click Get Started.
+3. In the Name Project field, enter your project name.
+4. Use the dropdown menu to select Import a QSF file.
+5. Choose the QSF file you downloaded from this QSF generator.
+6. Select Create Project.
+
